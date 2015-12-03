@@ -1,6 +1,6 @@
 # Use this file to practice simple unit tests
 
-gem 'minitest', '>= 5.0.0'
+# gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative "simple_class"
