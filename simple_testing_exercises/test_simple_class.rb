@@ -2,6 +2,7 @@
 
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative "simple_class"
 
 class DogTest < Minitest::Test
@@ -15,12 +16,12 @@ class CatTest < Minitest::Test
   def setup
     @cat = Cat.new
   end
-  
+
   def test_cat_class_exists
     klass = Module.const_get(:Cat)
     assert_equal Cat, klass
   end
-  
+
   def test_meow_exists
     method_response = @cat.meow
     assert_equal "meow", method_response, "Method meow did not return 'meow'"
