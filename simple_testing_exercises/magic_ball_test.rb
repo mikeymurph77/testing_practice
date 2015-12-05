@@ -7,15 +7,15 @@ class MagicBallTest < Minitest::Test
     magic_ball = MagicBall.new
     assert magic_ball.ask("How am I doing?") != nil
   end
-  
+
   def test_possible_answer_array
     assert_kind_of Array, MagicBall::ANSWERS
   end
-  
+
   def test_answer_array_is_not_empty
     refute_empty MagicBall::ANSWERS
   end
-  
+
   def test_question_is_not_a_number
     assert_raises "Question has invalid format." do
       magic_ball = MagicBall.new
